@@ -30,7 +30,7 @@ def init_logger():
 class JsonFormatter(logging.Formatter):
     def format(self, record):
         log_obj = {
-            'application': 'ocr',
+            'application': 'lemmatizer',
             'level': record.levelname,
             'message': record.getMessage(),
             'logger_name': record.filename,
