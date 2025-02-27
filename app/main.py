@@ -19,3 +19,7 @@ async def lemmatize(request: Request):
     except Exception as error:
         logging.getLogger().error(f"Common error: {error}", exc_info=True)
         raise HTTPException(status_code=500, detail="Произошла ошибка при лемматизации")
+
+@server.get("/healthcheck")
+async def healthcheck():
+    return {"status": "ok"}
