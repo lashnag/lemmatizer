@@ -1,7 +1,7 @@
 fastapi~=0.115.6
 pydantic~=2.10.3
-pymystem3~=0.2.0
 uvicorn~=0.32.1
 gunicorn~=23.0.0
 python-logstash-async~=3.0.0
 contextvars~=2.4
+pymorphy2>=0.9.1
