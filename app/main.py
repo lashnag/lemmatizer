@@ -18,7 +18,7 @@ async def lemmatize(request: Request):
         return JSONResponse(content={'lemmatized': lemma})
     except Exception as error:
         logging.getLogger().error(f"Common error: {error}", exc_info=True)
-        raise HTTPException(status_code=500, detail="Произошла ошибка при лемматизации")
+        raise HTTPException(status_code=500, detail=f"Lemmatization error: {error}")
 
 def lemmatize_word(word: str):
     parsed = morph.parse(word)[0]
